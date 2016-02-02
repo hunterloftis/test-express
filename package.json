@@ -6,7 +6,7 @@
     "start": "bin/www"
   },
   "engines": {
-    "node": "5.4.1"
+
   },
   "dependencies": {
     "express": "~4.2.0",
