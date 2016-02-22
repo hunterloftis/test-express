@@ -3,10 +3,12 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "bin/www"
+    "start": "bin/www",
+    "postinstall": "[ \"$NODE_ENV\" != production ] && npm run setup",
+    "setup": "uglifyjs --version"
   },
   "engines": {
-    
+
   },
   "dependencies": {
     "express": "~4.2.0",
