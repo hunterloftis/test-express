@@ -8,7 +8,7 @@
     "setup": "uglifyjs --version"
   },
   "engines": {
-    "node": "0.8.0"
+    "node": "0.9.0"
   },
   "dependencies": {
     "express": "~4.2.0",
