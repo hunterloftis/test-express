@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "bin/www",
+    "start": "echo \"MEM: $MEMORY_AVAILABLE\" && bin/www",
     "postinstall": "[ \"$NODE_ENV\" != production ] && npm run setup || true",
     "setup": "uglifyjs --version"
   },
