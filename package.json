@@ -8,7 +8,8 @@
     "setup": "uglifyjs --version"
   },
   "engines": {
-    "node": "5.11.0"
+    "node": "5.11.0",
+    "npm": "2.1.18"
   },
   "dependencies": {
     "body-parser": "~1.0.0",
