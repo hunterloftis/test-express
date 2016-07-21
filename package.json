@@ -5,11 +5,11 @@
   "scripts": {
     "start": "echo \"MEM: $MEMORY_AVAILABLE\" && bin/www",
     "postinstall": "[ \"$NODE_ENV\" != production ] && npm run setup || true",
-    "setup": "uglifyjs --version"
+    "setup": "uglifyjs --version",
+    "heroku-postbuild": "echo 'should fail' && exit 1"
   },
   "engines": {
-    "node": "5.x.x",
-    "npm": "3.x.x"
+    "node": "6.2.2"
   },
   "dependencies": {
     "body-parser": "~1.0.0",
