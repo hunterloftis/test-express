@@ -3,10 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "echo \"MEM: $MEMORY_AVAILABLE\" && bin/www",
-    "postinstall": "[ \"$NODE_ENV\" != production ] && npm run setup || true",
-    "setup": "uglifyjs --version",
-    "heroku-postbuild": "echo 'should fail' && exit 1"
+    "start": "bin/www"
   },
   "engines": {
     "node": "6.2.2"
