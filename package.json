@@ -6,7 +6,7 @@
     "start": "bin/www"
   },
   "engines": {
-    
+    "node": "canary"
   },
   "dependencies": {
     "body-parser": "~1.0.0",
