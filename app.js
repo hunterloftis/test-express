@@ -4,15 +4,27 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var csrf = require('csurf')
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
 
+var csrfProtection = csrf({ cookie: true })
+var parseForm = bodyParser.urlencoded({ extended: false })
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
+
+app.use(cookieParser())
+app.use(csrf({ cookie: true }))
+app.use(function(req, res, next) {
+  res.locals.csrfToken = req.csrfToken();
+  console.log('csrfToken:', res.locals.csrfToken);
+  next()
+})
 
 app.use(favicon());
 app.use(logger('dev'));
